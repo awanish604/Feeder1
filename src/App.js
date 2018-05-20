@@ -12,12 +12,51 @@ import {
 
 
 class App extends Component {
+constructor(props){
+super(props)
+this.state={
+    testData:[],
+    isLoading:false
+}
+
+}
+componentDidMount(){
+    this.setState({
+        isLoading:true
+    })
+    fetch('http://echo.jsontest.com/key/value/one/two')
+    .then(response =>response.json() )
+    .then(data => this.setState({testData : data,isLoading:false}))
+    
+}
+
+
+
+
   render() {
+      
+      const test=this.state.testData
+      const isLoading= this.state.isLoading
+      
+      if(isLoading){
+          return(<div> Loading ...............</div>)
+      }
+      
+      
+      
+      console.log(test+' the test value is')
+      console.log(isLoading+ 'is the value of isloading')
+      
     return (
+        
       <div className="App">
         <header className="App-header">
          
-          <h1 className="App-title">Welcome to Feedback Application</h1>
+          <h1 className="App-title">Welcome to Feedback Application <div>{test.one} {test.key}</div> </h1>
+        
+            
+            
+            
         </header>
         <div className="whole-template">
         <HashRouter>
@@ -40,6 +79,7 @@ class App extends Component {
       
         </div>
       </div>
+      
     );
   }
 }
