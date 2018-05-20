@@ -4,6 +4,12 @@ import Form from './Form'
 import Contact from './Contact'
 import logo from './logo.svg';
 
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
+
 
 class App extends Component {
   render() {
@@ -14,26 +20,24 @@ class App extends Component {
           <h1 className="App-title">Welcome to Feedback Application</h1>
         </header>
         <div className="whole-template">
+        <HashRouter>
+            <div>
         <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/form'>Feedback Form</a></li>
-            <li><a href='/contact'>Contact us</a></li>
-        
-        
+            <li><NavLink  to="/">Home</NavLink></li>
+            <li><NavLink to="/form">Feedback Form</NavLink></li>
+            <li><NavLink to="/contact">Contact us</NavLink></li>
+           
+      
         </ul>
         <div className="content">
-        <Home/>
-        <Form/>
-        <Contact/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/form" component={Form}/>
+            <Route path="/contact"component={Contact}/>
+      
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
+        </div>
+        </HashRouter> 
+      
         </div>
       </div>
     );
