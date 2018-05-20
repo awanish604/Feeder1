@@ -24,7 +24,7 @@ componentDidMount(){
     this.setState({
         isLoading:true
     })
-    fetch('http://echo.jsontest.com/key/value/one/two')
+    fetch('http://localhost:8080/FeedbackApplicationRS/v1/feedback/getfeedback')
     .then(response =>response.json() )
     .then(data => this.setState({testData : data,isLoading:false}))
     
@@ -52,7 +52,7 @@ componentDidMount(){
       <div className="App">
         <header className="App-header">
          
-          <h1 className="App-title">Welcome to Feedback Application <div>{test.one} {test.key}</div> </h1>
+          <h1 className="App-title">Welcome to Feedback Application <div>{test.comment} {test.name}</div> </h1>
         
             
             

@@ -20,3 +20,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /.metadata/
+/FeedbackApplicationReact/node_modules/*
+/FeedbackApplicationRS/.settings/*
