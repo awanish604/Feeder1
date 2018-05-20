@@ -5,14 +5,12 @@ class Form extends Component {
     return (
       <div>
         <h2>Feedback Form</h2>
-        <p>Mauris sem velit, vehicula eget sodales vitae,
-        rhoncus eget sapien:</p>
+        <p><h3>Let the truth begin !!</h3></p>
         <ol>
-          <li>name : <input type='text'/></li>
+          <li>name     : <input type='text'/></li>
           <li>comments : <input type='text'/></li>
-          <li>Vestibulum vulputate</li>
-          <li>Eget erat</li>
-          <li>Id porttitor</li>
+          <li>stars given : <slider/></li>
+          
         </ol>
       </div>
     );

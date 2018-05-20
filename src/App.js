@@ -22,7 +22,7 @@ class App extends Component {
         <div className="whole-template">
         <HashRouter>
             <div>
-        <ul>
+        <ul className="header">
             <li><NavLink  to="/">Home</NavLink></li>
             <li><NavLink to="/form">Feedback Form</NavLink></li>
             <li><NavLink to="/contact">Contact us</NavLink></li>
