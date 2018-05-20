@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Feedback Form</title>
+</head>
+<body>
+<form action="v1/feedback" method="post">
+	Name:<input type="text" name ="name"><br><br>
+	Comment:<textarea rows="" cols="" name ="comment"></textarea><br><br>
+	<button type="submit" name="submit" onclick="window.open('http://localhost:8080/FeedbackSystem/v1/feedback/getfeedback','_blank','resizable=yes')">Submit</button>
+</form>
+</body>
+</html>
