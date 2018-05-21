@@ -36,7 +36,7 @@ componentDidMount(){
   render() {
       
       const test=this.state.testData
-      const isLoading= this.state.isLoading
+      const isLoading= this.state.isLoading 
       
       if(isLoading){
           return(<div> Loading ...............</div>)
