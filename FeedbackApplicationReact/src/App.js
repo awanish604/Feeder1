@@ -3,6 +3,7 @@ import Home from './Home'
 import Form from './Form'
 import Contact from './Contact'
 import logo from './logo.svg';
+import request from "../node_modules/superagent/superagent";
 
 import {
   Route,
@@ -28,9 +29,17 @@ componentDidMount(){
     .then(response =>response.json() )
     .then(data => this.setState({testData : data,isLoading:false}))
     
+	
+    //test post method
+	request
+	.post('http://localhost:8080/FeedbackApplicationRS/v1/feedback')
+	.set('Content-Type', 'application/x-www-form-urlencoded')
+	.send({ name: "Deepak Sharma", comment: "comment sent from react UI" })
+	.end(function(err, res){
+	console.log(res.text);
+	});  
+    
 }
-
-
 
 
   render() {
