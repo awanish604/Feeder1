@@ -8,7 +8,7 @@ public class FeedbackService {
 	FeedbackDao dao = new FeedbackDao();
 
 	public int postFeedback(FeedbackVO feedback) {
-		return dao.postFeedback(feedback);
+		return dao.postFeedbackMongoDB(feedback);
 	}
 
 }
