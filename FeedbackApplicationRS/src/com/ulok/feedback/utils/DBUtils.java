@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.mongodb.MongoClient;
 import com.ulok.feedback.constants.DBConstants;
 
 public class DBUtils {
@@ -73,6 +74,13 @@ public class DBUtils {
 			}
 		}
 
+	}
+
+	public static void releaseResource(MongoClient client) {
+		if(client != null) {
+			client.close();
+		}
+		
 	}
 
 

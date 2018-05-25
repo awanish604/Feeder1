@@ -8,6 +8,8 @@ public class DBConstants {
 	 public static final String PASSWORD = "Adarsh@5";
 	 
 	 //MongoDB Constants
+	 //command to run to start mongo db server
+	 //"D:\Installed_Apps\MongoDB\bin\mongod.exe" --dbpath "c:\data\db"
 	 public static final String LOCAL_HOST = "localhost";
 	 public static final int MONGODB_PORT_NUMBER = 27017;
 	 public static final String MONGODB_LOCAL = "local";

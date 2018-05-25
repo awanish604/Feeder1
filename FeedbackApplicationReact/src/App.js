@@ -34,9 +34,9 @@ componentDidMount(){
 	request
 	.post('http://localhost:8080/FeedbackApplicationRS/v1/feedback')
 	.set('Content-Type', 'application/x-www-form-urlencoded')
-	.send({ name: "Deepak Sharma", comment: "comment sent from react UI" })
+	.send({ name: "Deepak Sharma", comment: "comment sent from react UI for MongoDB testing." })
 	.end(function(err, res){
-	console.log(res.text);
+	//console.log(res.text);
 	});  
     
 }
